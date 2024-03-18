@@ -1,0 +1,157 @@
+/* ========== GOOGLE FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+
+/* ========== VARIABLES CSS ========== */
+:root {
+    /* ========== Colors ========== */
+    --bg-color: #FAFAF9;
+    --white-color: #FFFFFF;
+    --star-active-color: #F5C044;
+    --star-inactive-color: #D4D4D8;
+    --link-check-color: #4CA154;
+    --text-color: #18181B;
+    --text-alt-color: #52525A;
+    /* ========== Fonts and typography ========== */
+    --body-font: 'Sora', sans-serif;
+    --heading-size: 2.25rem;
+    --body-size: 1.25rem;
+    --body-card-size: 1rem;
+    --list-item-size: .875rem;
+}
+
+/* ========== BASE ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--body-font);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* ========== TESTIMONIAL PAGE ========== */
+.container {
+    display: flex;
+    height: 100vh;
+    margin: auto 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ========== Reviewers Section ========== */
+.reviewers-section {
+    width: 50%;
+    padding: 2rem;
+}
+
+.icon {
+    display: inline-block;
+    padding: .6rem .8rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: var(--star-active-color);
+}
+
+.title {
+    font-size: var(--heading-size);
+    margin-bottom: 1rem;
+}
+
+.content {
+    margin-bottom: 1rem;
+    font-size: var(--body-size);
+    line-height: 2.2rem;
+    font-weight: 300;
+}
+
+.items {
+    margin-top: 2rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.item img {
+    margin-right: .8rem;
+}
+
+.item li {
+    font-size: var(--list-item-size);
+    font-weight: 300;
+}
+
+/* ========== Testimonial Section ========== */
+
+.testimonials {
+    display: grid;
+    width: 50%;
+    padding: 2rem;
+}
+
+.testimonial {
+    margin: 1rem 0;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem 3rem 0px rgba(212,212,216,0.3);
+    background-color: var(--white-color);
+}
+
+.testimonial__company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.testimonial__company .logo__company {
+    width: auto;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.testimonial:nth-child(1) {
+    justify-self: flex-end;
+    width: 65%;
+}
+
+.testimonial:nth-child(2) {
+    width: 65%;
+}
+
+.author {
+    margin-bottom: 1rem;
+    font-size: var(--body-card-size);
+    font-weight: 600;
+}
+
+.testimonial p {
+    font-size: var(--body-card-size);
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+/* ========== BREAKPOINTS ========== */
+/* For small devices */
+@media screen and (max-width: 640px) {
+    .container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .reviewers-section,
+    .testimonials {
+        padding: 2rem .5rem;
+        width: 100%;
+    }
+}
